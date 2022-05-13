@@ -34,9 +34,9 @@ export default {
         baseLabelOption: Object,
     },
     components: {
-        'chart-base-slider': t.ChartBaseSlider,
-        'chart-base-select': t.ChartBaseSelect,
-        'chart-base-box': t.ChartBaseBox
+        'chart-base-slider':  () => import('@/packages/ChartMix/chartChips/base/ChartBaseLabel'),
+        'chart-base-select': () => import('@/packages/ChartMix/chartChips/base/ChartBaseSelect'),
+        'chart-base-box': () => import('@/packages/ChartMix/chartChips/base/ChartBaseBox')
     },
     data: function() {
         return {

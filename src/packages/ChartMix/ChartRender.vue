@@ -28,7 +28,7 @@ export default {
             }
               this.renderCharts(chartOptions)
           },
-          immediate: true,
+          //immediate: true,
           deep: true,
       },
   },

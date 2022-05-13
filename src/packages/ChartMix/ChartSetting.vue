@@ -3,6 +3,7 @@
     <div style="overflow: hidden;height: 100%;">
       <!-- 图表类型 -->
       <chart-list
+      v-model="currentChartType"
         :chartAllType="currentChartType"
         @closeChartShowList="showList=false"
         :showList="showList"

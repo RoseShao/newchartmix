@@ -93,7 +93,7 @@ export default {
       type: Number,
       default: 10,
     },
-    currentChartType: {
+    value: {
       type: String,
       default: "echarts|line|default",
     },
@@ -113,6 +113,7 @@ export default {
       ],
       currentConfig: [],
       currentPro: null,
+      //currentChartType:"echarts|line|default",
       chartAllType: "",
       list_scroll_direction: -1000,
       // echarts中文
@@ -362,7 +363,7 @@ export default {
     }
   },
   watch: {
-    currentChartType(val) {
+    value(val) {
       this.chartAllType = val;
     },
     lang(val) {
@@ -403,7 +404,8 @@ export default {
         value
       );
       this.$emit('closeChartShowList')
-      this.currentChartType = value;
+      //this.currentChartType = value;
+      this.$emit('input',value);
     },
     quickListScroll: function (e) {
       var scrollTop = $(e.currentTarget).scrollTop();
